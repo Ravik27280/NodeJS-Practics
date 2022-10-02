@@ -55,19 +55,33 @@
 // console.log("compile exe...")
 
 
+// promises.
+// let a=20;
+// let b=0;
+// let waitingData=new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//         resolve(30);
+//     },2000)
 
-let a=20;
-let b=0;
+// })
+// waitingData.then((data)=>{
+//     b=data;
+//     console.log(a+b)
+// })
 
 
-let waitingData=new Promise((resolve, reject)=>{
-    setTimeout(()=>{
-        resolve(30);
-    },2000)
 
+// EXPRESS JS
+const express=require('express');
+const app = express();
+app.get('',(req,res)=>{
+    res.send('Hello, This is Home Page');
+});
+app.get('/help',(req,res)=>{
+    res.send("Hello this is help page");
 })
-waitingData.then((data)=>{
-    b=data;
-    console.log(a+b)
-})
+
+app.listen(5000);
+
+
 
