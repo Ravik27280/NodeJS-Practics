@@ -11,14 +11,63 @@
 // to enter user aregument
 // console.log(process.argv);
 
-const fs =require('fs');
-const input= process.argv;
-if(input[2]=='add'){
-    fs.writeFileSync(input[3],input[4])
-}
-else if(input[2]=='remove'){
-    fs.unlinkSync(input[3])
-}
-else{
-    console.log('Invalid input')
-}
+
+
+// add or remove file 
+// const fs =require('fs');
+// const input= process.argv;
+// if(input[2]=='add'){
+//     fs.writeFileSync(input[3],input[4])
+// }
+// else if(input[2]=='remove'){
+//     fs.unlinkSync(input[3])
+// }
+// else{
+//     console.log('Invalid input')
+// }
+
+
+// const fs=require('fs');
+// const path=require('path');
+// const dirPath=path.join(__dirname,'files');
+// for(i=0;i<5;i++)
+// {
+//     fs.writeFileSync(dirPath+"/data"+i+".txt","this is a test file "+i);
+//     // fs.writeFileSync(`data${i}.txt`,"this is a test file");
+    
+// }
+
+// fs.readdir(dirPath,(err,files)=>{
+//     files.forEach((item)=>{
+//         console.log("file name is", item)
+//     })
+// }
+// )
+
+
+// console.log("Start exe...")
+// setTimeout(()=>{
+//     console.log("Logic exe...")
+
+// },1000)
+// // console.log("Logic exe...")
+
+// console.log("compile exe...")
+
+
+
+let a=20;
+let b=0;
+
+
+let waitingData=new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        resolve(30);
+    },2000)
+
+})
+waitingData.then((data)=>{
+    b=data;
+    console.log(a+b)
+})
+
